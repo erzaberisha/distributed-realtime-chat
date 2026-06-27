@@ -1,0 +1,17 @@
+package projekti;
+
+import java.io.Serializable;
+
+public class Message implements Serializable {
+    public String type;     // LOGIN, MESSAGE, JOIN, LEAVE, CREATE
+    public String sender;
+    public String content;
+    public long timestamp;
+
+    public Message(String type, String sender, String content) {
+        this.type = type;
+        this.sender = sender;
+        this.content = content;
+        this.timestamp = System.currentTimeMillis();
+    }
+}
